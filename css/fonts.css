@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'LexendDeca-Bold';
+  src: url(/fonts/LexendDeca-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'LexendDeca-Regular';
+  src: url('/fonts/LexendDeca-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SpaceMono-Bold';
+  src: url(/fonts/SpaceMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'SpaceMono-Regular';
+  src: url('/fonts/SpaceMono-Regular.ttf');
+}
