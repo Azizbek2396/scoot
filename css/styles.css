@@ -190,17 +190,14 @@ body {
 /* Hero section */
 
 .hero {
-  padding: 100px 0;
+  padding: 130px 0;
   background-image: url(/img/Bitmap.png);
   background-color: #cccccc;
-  /* height: 500px; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-}
-.hero .container {
-  z-index: 10;
+  z-index: 1;
 }
 
 .hero::after {
@@ -213,7 +210,7 @@ body {
   background-color: #2F3B59;
   mix-blend-mode: normal;
   opacity: 0.75;
-  z-index: 9;
+  z-index: -1;
 }
 
 .hero-title {
@@ -222,9 +219,69 @@ body {
   line-height: 56px;
   letter-spacing: -2.5px;
   color: #FFFFFF;
+  margin-bottom: 40px;
+}
+
+.hero-line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.hero-description {
+  width: 45%;
+  padding-left: 100px;
+}
+
+.hero-description p {
+  font-family: 'LexendDeca-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #FFFFFF;
+  margin-bottom: 54px;
+}
+
+.hero-arrow {
+  position: absolute;
+  left: 51%;
+  top: 50%;
+}
+
+.hero-ovals {
+  position: absolute;
+  right: 0;
+  top: 62%;
 }
 
 /* /Hero section */
+
+@media screen and (max-width: 1300px) {
+  .hero-line {
+    display: none;
+  }
+
+  .hero-description {
+    width: 35%;
+    padding: 0;
+  }
+
+  .hero-arrow {
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .hero-title {
+    text-align: center;
+  }
+  .hero-description {
+    width: 100%;
+    text-align: center;
+  }
+  
+}
 
 @media screen and (max-width: 810px) {
   .container {
@@ -309,6 +366,7 @@ body {
 
   #navbar-menu {
     width: 0;
+    z-index: 100;
   }
 
   .logo-container {
