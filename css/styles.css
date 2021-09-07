@@ -2,13 +2,6 @@
 @import url(./fonts.css);
 
 
-:root {
-  --navbar-bg-color: hsl(0, 0%, 15%);
-  --navbar-text-color: hsl(0, 0%, 85%);
-  --navbar-text-color-focus: white;
-  --navbar-bg-contrast: hsl(0, 0%, 25%);
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,6 +21,8 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Header */
 
 #navbar {
   background-color: #fff;
@@ -50,7 +45,6 @@ body {
 
 .navbar-item {
   margin-right: 32px;
-  /* width: 100%; */
 }
 
 #navbar .navbar-links .navbar-item:last-child {
@@ -79,9 +73,6 @@ body {
 
 .navbar-link {
   justify-content: center;
-  /* width: 100%; */
-  /* padding: 0.4em 0.8em;
-  border-radius: 5px; */
 }
 
 .navbar-link:focus,
@@ -138,7 +129,6 @@ body {
 }
 
 #navbar-menu {
-  /* width: 0; */
   position: fixed;
   top: 58px;
   bottom: 0;
@@ -152,7 +142,6 @@ body {
 }
 
 #navbar.opened #navbar-menu {
-  /* background-color: #333A44; */
   opacity: 1;
   visibility: visible;
   width: 80%;
@@ -164,15 +153,11 @@ body {
   max-height: 0;
   overflow: hidden;
   position: absolute;
-  /* background-color: var(--navbar-bg-color); */
   display: flex;
   flex-direction: column;
   align-items: start;
   left: 0;
   right: 0;
-  /* margin: 1.4rem;
-  border-radius: 5px;
-  box-shadow: 0 0 20px rgba(100, 100, 100, 0.3); */
 }
 
 #navbar.opened .navbar-links {
@@ -199,6 +184,47 @@ body {
   background-color: transparent;
   color: var(--yellow);
 }
+
+/*/ Header */
+
+/* Hero section */
+
+.hero {
+  padding: 100px 0;
+  background-image: url(/img/Bitmap.png);
+  background-color: #cccccc;
+  /* height: 500px; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero .container {
+  z-index: 10;
+}
+
+.hero::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2F3B59;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  z-index: 9;
+}
+
+.hero-title {
+  font-family: 'SpaceMono-bold';
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+  color: #FFFFFF;
+}
+
+/* /Hero section */
 
 @media screen and (max-width: 810px) {
   .container {
