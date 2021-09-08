@@ -309,10 +309,16 @@ body {
 
 
 /* Telemetry section */
-
+  /* first */
 .telemetry {
+  position: relative;
   padding: 80px 0;
+  overflow: hidden;
+}
+
+.first {
   background: url(/img/half-circle.png) no-repeat right;
+  background-position-y: 80px;
 }
 
 .col-6 {
@@ -355,9 +361,33 @@ body {
 
 .telemetry-arrow {
   position: absolute;
-  right: -15%;
-  top: 300px;
+  right: 0;
+  top: 380px;
 }
+  /* /first */
+
+  /* second */
+  .second {
+    background: url(/img/half-circle-to-left.png) no-repeat left;
+  background-position-y: 80px;
+  }
+  .second .row .col-6:first-child {
+    order: 2;
+    padding-left: 10%;
+    padding-right: 0;
+  }
+
+  .second .row .col-6:nth-child(2) {
+    padding-left: 0;
+    padding-right: 10%;
+  }
+
+  .second .right-arrow {
+    position: absolute;
+    left: -90px;
+    top: 90px;
+  }
+  /* /second */
 
 /* /Telemetry section */
 
@@ -376,11 +406,11 @@ body {
   }
 
   .telemetry .row .col-6:first-child {
-    padding-right: 0;
+    padding: 0;
   }
 
   .telemetry .row .col-6:nth-child(2) {
-    padding-left: 0;
+    padding: 0;
   }
 }
 
@@ -446,6 +476,10 @@ body {
     order: 2;
   }
 
+  .telemetry .row .col-6:nth-child(2) img {
+    margin-bottom: 50px;
+  }
+
   .telemetry-desc h2,
   .telemetry-desc p {
     text-align: center;
@@ -469,6 +503,7 @@ body {
   .home-link {
     margin-right: 40px;
   }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -491,7 +526,7 @@ body {
   }
 
   .telemetry-arrow {
-    right: -10%;
+    width: 600px;
   }
 }
 
@@ -505,6 +540,17 @@ body {
     font-size: 12px;
     line-height: 20px;
     padding: 10px 20px;
+  }
+  .steps {
+      padding: 50px 0;
+  }
+
+  .telemetry {
+    background-image: none;
+  }
+
+  .telemetry-arrow {
+    width: 500px;
   }
 }
 
@@ -527,6 +573,16 @@ body {
   .hero-arrow {
     width: 250px;
     top: 79%;
+  }
+
+  .telemetry {
+    padding: 40px 0;
+  }
+
+  .telemetry-arrow {
+    width: auto;
+    left: 2%;
+    top: 340px;
   }
 }
 
@@ -578,6 +634,31 @@ body {
 
   .step-description {
     padding: 0 15px;
+  }
+
+  .telemetry-arrow {
+    right: -95%;
+    top: 35%;
+  }
+
+  .telemetry .row .col-6:nth-child(2) img {
+    width: 100%;
+  }
+
+  .telemetry-desc h2 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.42857px;
+  }
+
+  .telemetry-desc p {
+    margin-bottom: 32px;
+  }
+
+  .telemetry-desc .get-scootin {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 14px 38px;;
   }
 
 }
@@ -655,6 +736,17 @@ body {
   .hero-arrow {
     width: 350px;
     left: -215px;
+  }
+
+  .telemetry-arrow {
+    top: 26%;
+    left: 3%;
+  }
+
+  .second .right-arrow {
+    position: absolute;
+    left: -190px;
+    top: 70px;
   }
 }
 
