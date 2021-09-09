@@ -1,0 +1,20 @@
+.about-hero {
+  padding: 72px 0;
+  background: url('/img/about-hero.png') no-repeat center / cover;
+  /* background: url('/img/ovals.png') no-repeat right; */
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2F3B59;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  z-index: -1;
+}
