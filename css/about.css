@@ -1,9 +1,21 @@
+/* About hero section */
 .about-hero {
   padding: 72px 0;
   background: url('/img/about-hero.png') no-repeat center / cover;
   /* background: url('/img/ovals.png') no-repeat right; */
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  position: absolute;
+  content: "";
+  background: url(/img/ovals.png) no-repeat right;
+  width: 234px;
+  height: 62px;
+  right: -31px;
+  top: 63px;
 }
 
 .about-hero::after {
@@ -17,4 +29,100 @@
   mix-blend-mode: normal;
   opacity: 0.75;
   z-index: -1;
+}
+
+.about-title {
+  font-family: 'SpaceMono-bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 44px;
+  letter-spacing: -2.5px;
+  color: #FFFFFF;
+}
+/* /About hero section */
+
+/* Our values section */
+.our-values {
+  padding: 100px 0;
+}
+
+.our-values-title {
+  font-family: 'SpaceMono-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: -2.14286px;
+  color: var(--dark-navy);
+  margin-bottom: 90px;
+}
+
+.image-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 90px;
+}
+
+.image-content img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+}
+
+.image-content span {
+  position: absolute;
+  bottom: -55px;
+  width: 96px;
+  height: 96px;
+  line-height: 96px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+  text-align: center;
+  font-family: 'SpaceMono-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: -1.07143px;
+  color: var(--dark-navy);
+}
+
+.our-values .row .col-4 h3 {
+  font-family: 'SpaceMono-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: -1.07143px;
+  color: var(--dark-navy);
+  margin-bottom: 30px;
+}
+
+.our-values .row .col-4 p {
+  font-family: 'LexendDeca-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--dim-grey);
+}
+/* /Our values section */
+
+@media screen and (max-width: 445px) {
+  .about-hero::before {
+    display: none;
+  }
+
+  .about-title {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -1.78571px;
+  }
 }
