@@ -1,0 +1,88 @@
+.carrers-hero {
+  padding: 72px 0;
+  background: url('/img/carrers-background.png') no-repeat center / cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.staffs {
+  padding-bottom: 120px;
+}
+
+.staff {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 32px 40px;
+  background-color: var(--snow);
+  margin-bottom: 24px;
+}
+
+.staff-content h3 {
+  font-family: 'SpaceMono-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;letter-spacing: -1.07143px;
+  color: var(--dark-navy);
+}
+
+.staff-content p {
+  font-family: 'LexendDeca-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--dark-navy);
+}
+
+.staff-apply button {
+  padding: 14px 68px;
+}
+
+@media screen and (max-width: 650px) {
+  .staff-content h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .staff-content p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .staff-apply button {
+    padding: 10px 55px;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .staff {
+    flex-direction: column;
+  }
+
+  .staff-content {
+    margin-bottom: 16px;
+  }
+
+  .staff-content h3,
+  .staff-content p {
+    text-align: center;
+  }
+
+  .staff-content h3 {
+    font-size: 18px;
+  }
+
+  .staff-apply {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .staff-apply button {
+    display: block;
+  }
+}

@@ -1,0 +1,74 @@
+.location-hero {
+    padding: 72px 0;
+    background: url('/img/carrers-background.png') no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.message-us {
+  padding: 120px 0;
+}
+
+.message-us .container .row .col-4:first-child h3 {
+  font-family: 'SpaceMono-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14286px;
+  color: var(--dark-navy);
+}
+
+.message-us .container .row .col-4:nth-child(2) p {
+  font-family: 'LexendDeca-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--dim-grey);
+}
+
+.message-us .container .row .col-4:last-child {
+  text-align: right;
+  padding-right: 0;
+}
+
+@media screen and (max-width: 1070px) {
+  .message-us .container .row {
+    flex-direction: column;
+  }
+
+  .message-us .container .row .col-4 {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .message-us .container .row .col-4:first-child h3,
+  .message-us .container .row .col-4:nth-child(2) p,
+  .message-us .container .row .col-4:last-child {
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .message-us .container .row .col-4 {
+    margin-bottom: 32px;
+  }
+  .message-us .container .row .col-4:first-child h3 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.42857px;
+  }
+
+  .message-us .container .row .col-4:last-child button {
+    display: block;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 10px 35px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

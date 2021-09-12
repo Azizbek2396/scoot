@@ -2,7 +2,6 @@
 .about-hero {
   padding: 72px 0;
   background: url('/img/about-hero.png') no-repeat center / cover;
-  /* background: url('/img/ovals.png') no-repeat right; */
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -114,6 +113,136 @@
 }
 /* /Our values section */
 
+/* FAQs section */
+  /* .faqs {
+    margin-bottom: 64px;
+  } */
+
+  .col-8 {
+    width: 66.666%;
+  }
+
+  .faqs-title {
+    font-family: 'SpaceMono-Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -2.14286px;
+    color: var(--dark-navy);
+    margin-bottom: 90px;
+  }
+
+  .faqs .container .row {
+    margin-bottom: 64px;
+  }
+
+  .faqs .container .row .col-4 h2 {
+    font-family: 'SpaceMono-Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -1.78571px;
+    color: var(--dark-navy);
+  }
+
+  .tab {
+    background-color: var(--snow);
+    list-style: none;
+    margin-bottom: 16px;
+  }
+
+  .tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .tab input:checked ~ .tab-content {
+    max-height: 200vh;
+  }
+
+  .tab label {
+    position: relative;
+    padding: 32px 40px;
+    cursor: pointer;
+    display: block;
+    font-family: 'SpaceMono-Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    color: var(--dark-navy);
+  }
+
+  .tab label::after {
+    position: absolute;
+    content: "";
+    top: 42px;
+    right: 40px;
+    border: solid var(--yellow);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+  }
+
+  .tab input[type=checkbox]:checked + label::after {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+
+  .tab-content {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .tab-content p {
+    padding: 0 40px 32px 40px;
+    font-family: 'LexendDeca-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--dark-navy);
+  }
+
+
+/* /FAQs section */
+
+@media screen and (max-width: 1070px) {
+  .our-values .container .row {
+    flex-direction: column;
+  }
+
+  .our-values .container .row .col-4 {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .faqs .container .row {
+    flex-direction: column;
+  }
+
+  .faqs .container .row .col-4,
+  .faqs .container .row .col-8 {
+    width: 100%;
+  }
+
+  .faqs .container .row .col-4 h2 {
+    margin-bottom: 32px;
+  }
+}
+
 @media screen and (max-width: 445px) {
   .about-hero::before {
     display: none;
@@ -124,5 +253,51 @@
     line-height: 40px;
     text-align: center;
     letter-spacing: -1.78571px;
+  }
+
+  .faqs .container .row {
+    margin-bottom: 48px;
+  }
+
+  .faqs-title {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.42857px;
+    margin-bottom: 48px;
+  }
+
+  .faqs .container .row .col-4 h2 {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+  }
+
+  .tab label {
+    padding: 28px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.803571px;
+  }
+
+  .tab label::after {
+    top: 35px;
+    right: 28px;
+  }
+
+  .tab-content p {
+    padding: 0 28px 28px 28px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .image-content img {
+    width: 100%;
+    height: auto;
+  }
+  .image-content span {
+    bottom: -40px;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
   }
 }
